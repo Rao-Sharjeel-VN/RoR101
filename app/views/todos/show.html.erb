@@ -3,3 +3,6 @@
 <p>name: <%= @todo.name %> </p>
 <p>id: <%= @i %> </p>
 <p>Des: <%= @todo.description %> </p>
+
+
+<%= link_to "edit this todo", edit_todo_path(@todo) %>

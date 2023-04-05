@@ -1,0 +1,41 @@
+<center><h1>All Todos</h1></center>
+
+<p>
+<%= link_to "create a new Todo", new_todo_path %>
+</p>
+
+<table>
+
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+	</tr>
+
+	<% Todo.all.each do |todo| %>
+
+	<tr>
+		<td>
+			<%= todo.name %>
+		</td>
+		
+		<td>
+			<%= todo.description %>
+		</td>
+
+		<td>
+			<%= link_to "Edit", edit_todo_path(todo) %>
+		</td>
+		
+		<td>
+			<%= link_to "Show", todo_path(todo) %>
+		</td>
+
+		<td><%= link_to "Delete", todo_path(todo), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+		
+
+
+	</tr>
+
+	<% end %> 
+
+</table>
