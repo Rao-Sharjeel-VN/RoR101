@@ -77,3 +77,5 @@ group :production do
 
 
 end
+
+gem "cssbundling-rails", "~> 1.1"
