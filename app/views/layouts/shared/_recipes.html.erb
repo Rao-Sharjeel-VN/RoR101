@@ -1,0 +1,18 @@
+
+
+
+<% obj.each do |recipe| %>
+	<div class='container'>
+<div class='well col-md-8'>
+
+	<h3><%= recipe.name %></h3> 
+	<br>
+	<h5><%= recipe.description %></h5>
+	<br>
+	<%= link_to "Show", recipe_path(recipe), class: "btn btn-primary"%>
+	<br>
+	<hr>
+	<br>
+</div></div>
+
+<% end %>

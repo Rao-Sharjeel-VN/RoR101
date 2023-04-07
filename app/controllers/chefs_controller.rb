@@ -18,7 +18,23 @@ class ChefsController < ApplicationController
 	end
 
 	def show
+		@chef = Chef.find(params[:id])
 	end
+
+
+	def edit
+		@chef = Chef.find(params[:id])
+
+	end
+
+
+	def update
+		@chef = Chef.find(params[:id])
+		
+	end
+
+
+
 
 	private
 

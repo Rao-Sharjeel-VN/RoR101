@@ -1,1 +1,4 @@
-<%= render 'layouts/shared/page_title', title: "Congratulations you are our chef now!" %>
+<%= render 'layouts/shared/page_title', title: "#{@chef.chefname} you are our chef now!" %>
+<%= render 'layouts/shared/recipes', obj: @chef.recipes %>
+
+
