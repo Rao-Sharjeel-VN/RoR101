@@ -1,0 +1,32 @@
+
+
+<%= render 'layouts/shared/page_title', title: @recipe.name %>
+
+	<div class='container'>
+	<div class='description center col-md-8'>
+	<div class='pull-right'>
+	<h3>Name</h3>
+	<h4><%= @recipe.name %></h3> 
+	<br>
+	<h5><strong>Description</strong></h5>
+	<h5><%= @recipe.description %></h5>
+	
+	<br>
+	<h5><strong>Created by</strong></h5>
+	<h5><%= @recipe.chef.chefname %></h5>
+	
+	<br>
+	<h5><strong>Created</strong></h5>
+	<h5><%= time_ago_in_words(@recipe.created_at) %> ago</h5>
+	<br>
+	<%= link_to "Delete", recipe_path(@recipe), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+
+	<br>
+	<br>
+	<br>
+
+	<%= link_to "Edit", edit_recipe_path(@recipe), class: 'btn btn-primary'%>
+	<hr>
+	
+</div>
+</div></div>

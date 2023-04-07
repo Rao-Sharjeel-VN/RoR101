@@ -1,4 +1,4 @@
-class TodosController < ApplicationController
+	class TodosController < ApplicationController
 	def new
 		# @todo = Todo.new(name: "Rao Sharjeel", description: "This is long text")
 		@todo = Todo.new
